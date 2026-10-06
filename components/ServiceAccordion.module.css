@@ -1,0 +1,51 @@
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms var(--motion-ease);
+}
+
+/* The zero-minimum track lets content determine its full responsive height. */
+.clip {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.content {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 160ms var(--motion-ease), transform 400ms var(--motion-ease);
+}
+
+.indicator {
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 225ms var(--motion-ease);
+}
+
+.accordion[data-open="true"] .panel {
+  grid-template-rows: 1fr;
+  transition-duration: 450ms;
+}
+
+.accordion[data-open="true"] .content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 320ms;
+  transition-delay: 60ms;
+}
+
+.accordion[data-open="true"] .indicator {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .content,
+  .indicator {
+    transition: none;
+  }
+
+  .content {
+    transform: none;
+  }
+}
