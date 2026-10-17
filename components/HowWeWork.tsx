@@ -15,7 +15,7 @@ const steps = [
     number: "03",
     title: "Deliver",
     description:
-      "W Projects provides the agreed planning, reporting, advisory or documentation support.",
+      "WProjects provides the agreed planning, reporting, advisory or documentation support.",
   },
   {
     number: "04",

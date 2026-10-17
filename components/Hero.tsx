@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function Hero({ contactHref }: { contactHref: string }) {
   return (
     <section aria-labelledby="hero-heading" className="hero-entrance site-container pt-12 sm:pt-16 lg:pt-20">
-      <p data-hero-part="eyebrow" className="section-label mb-8 gap-2 tracking-[0.12em] sm:mb-10 sm:gap-3 sm:tracking-[0.16em]">
+      <p data-hero-part="eyebrow" className="section-label mb-8 gap-2 sm:mb-10 sm:gap-3">
         <span aria-hidden="true" className="section-label-rule" />
         PROJECT DELIVERY &amp; ADVISORY
       </p>
       <h1
         id="hero-heading"
         data-hero-part="headline"
-        className="max-w-[22ch] text-[clamp(2.15rem,5.16vw,4.515rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance"
+        className="max-w-[22ch] text-[clamp(2.15rem,4.33vw,3.79rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance"
       >
         <span className="block">Experienced project support.</span>
         <span className="block">Without the <span className="whitespace-nowrap">full-time</span> overhead.</span>
@@ -18,7 +18,7 @@ export default function Hero({ contactHref }: { contactHref: string }) {
       <div className="mt-8 grid gap-8 sm:mt-10 lg:mt-12 lg:grid-cols-12">
         <div className="lg:col-span-7 lg:col-start-6">
           <p data-hero-part="copy" className="max-w-[42rem] text-base leading-[1.8] text-muted sm:text-lg">
-            W Projects provides flexible project planning, project controls,
+            WProjects provides flexible project planning, project controls,
             construction advisory, HSE and documentation support for construction
             businesses that need additional project expertise.
           </p>

@@ -45,7 +45,7 @@ export default function Services() {
           }>
             <div className="grid pb-9 pl-[3.25rem] sm:pl-[5rem] lg:grid-cols-12 lg:pb-11 lg:pl-0">
               <div className="lg:col-span-6 lg:col-start-7">
-                <p className="mb-4 text-xs font-medium tracking-[0.14em] text-muted">
+                <p className="section-label mb-4 text-muted">
                   CAPABILITIES
                 </p>
                 <ul className="grid gap-x-8 gap-y-3 text-base leading-[1.6] sm:grid-cols-2">

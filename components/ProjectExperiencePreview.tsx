@@ -10,7 +10,7 @@ export default function ProjectExperiencePreview() {
           SELECTED EXPERIENCE
         </h2>
         <p data-reveal-part="copy" className="text-sm leading-[1.7] text-muted lg:col-span-8">
-          Previous professional experience informing W Projects.
+          Previous professional experience informing WProjects.
         </p>
       </div>
       <ul data-reveal-group className="mt-8 grid gap-x-8 md:grid-cols-3 lg:gap-x-12">

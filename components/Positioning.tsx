@@ -24,7 +24,7 @@ export default function Positioning() {
                 or engaging a large consultancy.
               </p>
               <p>
-                W Projects supports one-off reviews, specific deliverables,
+                WProjects supports one-off reviews, specific deliverables,
                 individual project stages and ongoing or retained requirements
                 where appropriate.
               </p>

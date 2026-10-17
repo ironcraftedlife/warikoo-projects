@@ -6,9 +6,9 @@ import FinalCTA from "@/components/FinalCTA";
 import { services } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "Services | W Projects",
+  title: "Services | WProjects",
   description:
-    "Explore W Projects services: project planning, controls, construction advisory, HSE and documentation support for construction clients across the UK.",
+    "Explore WProjects services: project planning, controls, construction advisory, HSE and documentation support for construction clients across the UK.",
 };
 
 export default function ServicesPage() {
@@ -21,19 +21,19 @@ export default function ServicesPage() {
             <span aria-hidden="true" className="section-label-rule" />
             SERVICES
           </p>
-          <h1 id="services-page-heading" className="max-w-[20ch] text-[clamp(2.42rem,5.28vw,4.62rem)] leading-[1.08] font-medium tracking-[-0.055em]">
-            Project expertise<br />where you need it.
+          <h1 id="services-page-heading" className="max-w-[20ch] text-[clamp(2.2rem,4.8vw,4.2rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
+            Project expertise where you need it.
           </h1>
           <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
             <div className="max-w-[40rem] space-y-5 text-base leading-[1.8] text-muted sm:text-lg lg:col-span-7 lg:col-start-6">
               <p>
-                W Projects provides planning, project controls,
+                WProjects provides planning, project controls,
                 construction advisory, HSE and documentation support for
                 construction clients across the UK.
               </p>
               <p>
-                Support can be provided for a specific deliverable, project
-                stage, one-off review or ongoing requirement.
+                Explore the service areas below to identify the support relevant
+                to your project.
               </p>
             </div>
           </div>
@@ -43,8 +43,8 @@ export default function ServicesPage() {
           <div data-reveal-group className="site-container py-8 sm:py-12 lg:py-16">
             {services.map((service) => (
               <article data-reveal="row" key={service.slug} aria-labelledby={`service-${service.number}-heading`} className="grid gap-6 border-t border-border py-10 sm:py-14 lg:grid-cols-12 lg:gap-7 lg:py-16">
-                <p className="text-xs font-medium tracking-[0.16em] text-muted lg:col-span-4">
-                  SERVICE <span className="ml-3 text-accent">{service.number}</span>
+                <p className="section-label text-muted lg:col-span-4">
+                  SERVICE <span className="text-accent">{service.number}</span>
                 </p>
                 <div className="min-w-0 lg:col-span-8">
                   <h2 id={`service-${service.number}-heading`} className="max-w-[24ch] text-[clamp(1.8rem,3.375vw,2.925rem)] leading-[1.15] font-medium tracking-[-0.045em] text-balance">
@@ -53,7 +53,7 @@ export default function ServicesPage() {
                   <div className="mt-7 grid gap-7 sm:mt-9 sm:grid-cols-2 sm:gap-9">
                     <p className="text-base leading-[1.75] text-muted">{service.introduction}</p>
                     <div>
-                      <p className="mb-4 text-xs font-medium tracking-[0.14em] text-muted">SELECTED CAPABILITIES</p>
+                      <p className="section-label mb-4 text-muted">SELECTED CAPABILITIES</p>
                       <ul className="space-y-3 text-sm leading-[1.7]">
                         {service.capabilities.slice(0, 3).map((capability) => (
                           <li key={capability} className="border-l border-border pl-3">{capability}</li>

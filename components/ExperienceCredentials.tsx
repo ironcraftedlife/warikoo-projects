@@ -25,11 +25,11 @@ export default function ExperienceCredentials() {
             </h2>
             <div data-reveal-part="copy" className="mt-7 max-w-[42rem] space-y-5 text-base leading-[1.75] text-muted sm:mt-9 sm:text-lg">
               <p>
-                W Projects draws on professional project planning, controls,
+                WProjects draws on professional project planning, controls,
                 construction and HSE knowledge to support client delivery.
               </p>
               <p>
-                The professional background informing W Projects includes
+                The professional background informing WProjects includes
                 construction projects within the energy sector, including Oil
                 &amp; Gas and Nuclear, with knowledge relevant to construction
                 projects more broadly.
@@ -43,8 +43,7 @@ export default function ExperienceCredentials() {
         </div>
 
         <p className="mt-10 max-w-[42rem] text-sm leading-[1.7] text-muted">
-          The following are individual professional credentials informing W
-          Projects, rather than company accreditations.
+          The following are individual professional credentials informing WProjects, rather than company accreditations.
         </p>
         <ul aria-label="Individual professional credentials" className="mt-14 border-b border-border sm:mt-20 sm:grid sm:grid-cols-3 sm:gap-x-8">
           {credentials.map((credential) => (

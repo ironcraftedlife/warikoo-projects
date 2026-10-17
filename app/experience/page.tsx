@@ -5,9 +5,9 @@ import FinalCTA from "@/components/FinalCTA";
 import { experienceCategories, projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Project Experience | W Projects",
+  title: "Project Experience | WProjects",
   description:
-    "Previous professional experience informing W Projects across shutdown and turnaround projects, equipment replacement and heavy lifts, and marine and capital infrastructure.",
+    "Previous professional experience informing WProjects across shutdown and turnaround projects, equipment replacement and heavy lifts, and marine and capital infrastructure.",
 };
 
 function ProjectDescription({ text }: { text: string }) {
@@ -27,14 +27,14 @@ export default function ExperiencePage() {
             <span aria-hidden="true" className="section-label-rule" />
             EXPERIENCE
           </p>
-          <h1 id="experience-page-heading" className="max-w-[23ch] text-[clamp(2.42rem,5.28vw,4.62rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
+          <h1 id="experience-page-heading" className="max-w-[23ch] text-[clamp(2.2rem,4.8vw,4.2rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
             Experience shaped by complex project delivery.
           </h1>
           <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
             <p className="max-w-[40rem] text-base leading-[1.8] text-muted sm:text-lg lg:col-span-7 lg:col-start-6">
               Previous professional experience in refinery shutdowns, equipment
               replacement, heavy-lift construction and marine infrastructure
-              informs the project support provided by W Projects.
+              informs the project support provided by WProjects.
             </p>
           </div>
         </section>
@@ -48,8 +48,8 @@ export default function ExperiencePage() {
               </h2>
               <p data-reveal-part="copy" className="max-w-[40rem] text-sm leading-[1.7] text-muted lg:col-span-8">
                 These examples represent previous professional experience
-                informing W Projects. They are not presented as contracts
-                awarded to W Projects.
+                informing WProjects. They are not presented as contracts
+                awarded to WProjects.
               </p>
             </div>
 

@@ -10,8 +10,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "W Projects | Project Delivery & Advisory",
-  description: "W Projects provides project planning, controls, construction advisory, HSE and documentation support across the UK. Experienced support without the full-time overhead.",
+  title: "WProjects | Project Delivery & Advisory",
+  description: "WProjects provides project planning, controls, construction advisory, HSE and documentation support across the UK. Experienced support without the full-time overhead.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

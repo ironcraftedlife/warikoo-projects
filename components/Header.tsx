@@ -50,7 +50,7 @@ export default function Header({ contactHref }: { contactHref: string }) {
         <Link
           href="/"
           className="flex min-h-11 shrink-0 items-center py-2"
-          aria-label="W Projects — Home"
+          aria-label="WProjects — Home"
         >
           <Image
             src="/brand/warikoo-monogram-header.svg"
