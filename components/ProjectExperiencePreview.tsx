@@ -1,5 +1,5 @@
-﻿import Link from "next/link";
-import { previewProjects } from "@/lib/projects";
+import Link from "next/link";
+import { experienceCategories } from "@/lib/projects";
 
 export default function ProjectExperiencePreview() {
   return (
@@ -10,21 +10,18 @@ export default function ProjectExperiencePreview() {
           SELECTED EXPERIENCE
         </h2>
         <p data-reveal-part="copy" className="text-sm leading-[1.7] text-muted lg:col-span-8">
-          Professional experience brought to WARIKOO Projects.
+          Previous professional experience informing W Projects.
         </p>
       </div>
-      <ol data-reveal-group className="mt-8 grid gap-x-8 md:grid-cols-3 lg:gap-x-12">
-        {previewProjects.map((project) => (
-          <li data-reveal="row" key={project.number} className="border-t border-border py-6 sm:py-7">
-            <p className="text-[clamp(2.25rem,4vw,3.5rem)] leading-[1.1] font-medium tracking-[-0.045em]">
-              <span className="sr-only">Project value: </span>{project.value}
-            </p>
-            <h3 className="mt-4 max-w-[25ch] text-[clamp(1.25rem,1.8vw,1.5rem)] leading-[1.3] font-medium tracking-[-0.025em]">
-              {project.title}
+      <ul data-reveal-group className="mt-8 grid gap-x-8 md:grid-cols-3 lg:gap-x-12">
+        {experienceCategories.map((category) => (
+          <li data-reveal="row" key={category.id} className="border-t border-border py-6 sm:py-7">
+            <h3 className="max-w-[25ch] text-[clamp(1.25rem,1.8vw,1.5rem)] leading-[1.3] font-medium tracking-[-0.025em]">
+              {category.title}
             </h3>
           </li>
         ))}
-      </ol>
+      </ul>
       <Link href="/experience" className="nav-link mt-3 inline-flex min-h-11 w-fit items-center gap-7 border-b border-border text-sm font-medium sm:mt-5">
         View Project Experience <span aria-hidden="true" className="motion-arrow text-accent">→</span>
       </Link>

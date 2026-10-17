@@ -56,7 +56,30 @@ export const projects: readonly ProjectExperience[] = [
   },
 ];
 
-// Selected in editorial order; project numbers retain their full-list identity.
-export const previewProjects = ["03", "05", "02"].map((number) =>
-  projects.find((project) => project.number === number)!,
-);
+// Shared by the homepage preview and the full Experience page.
+export const experienceCategories = [
+  {
+    id: "shutdown-turnaround",
+    title: "Shutdown & Turnaround Projects",
+    headline: "Shutdown constraints and construction interfaces.",
+    description:
+      "Workforce facilities and equipment replacement in refinery shutdown environments, with constrained execution windows and complex interfaces.",
+    projectNumbers: ["01", "02"],
+  },
+  {
+    id: "equipment-heavy-lifts",
+    title: "Equipment Replacement & Heavy Lifts",
+    headline: "Equipment weight and lifting requirements.",
+    description:
+      "Constructability, planning and coordination for equipment replacement, including heavy-lift activities using crawler and mobile cranes.",
+    projectNumbers: ["03", "04"],
+  },
+  {
+    id: "marine-capital",
+    title: "Marine & Capital Infrastructure",
+    headline: "Marine systems and associated infrastructure.",
+    description:
+      "Marine loading infrastructure, vapour recovery and associated piping within a major capital project.",
+    projectNumbers: ["05"],
+  },
+];

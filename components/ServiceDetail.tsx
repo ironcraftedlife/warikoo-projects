@@ -19,7 +19,7 @@ export default function ServiceDetail({ service, nextService }: { service: Servi
           </p>
           <Link href="/services" className="nav-link inline-flex min-h-11 items-center text-sm text-muted">All Services</Link>
         </div>
-        <h1 id="service-heading" className="max-w-[24ch] text-[clamp(2.5rem,6vw,5.25rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
+        <h1 id="service-heading" className="max-w-[24ch] text-[clamp(2.2rem,5.28vw,4.62rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
           {service.title}
         </h1>
         <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
@@ -67,7 +67,7 @@ export default function ServiceDetail({ service, nextService }: { service: Servi
               DELIVERY
             </h2>
             <p className="max-w-[40rem] text-base leading-[1.8] text-white/75 sm:text-lg lg:col-span-8">
-              WARIKOO Projects works primarily through remote review, reporting,
+              W Projects works primarily through remote review, reporting,
               planning and documentation support across the UK, with site visits
               available by prior arrangement.
             </p>

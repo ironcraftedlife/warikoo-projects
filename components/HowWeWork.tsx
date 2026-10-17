@@ -15,7 +15,7 @@ const steps = [
     number: "03",
     title: "Deliver",
     description:
-      "WARIKOO Projects provides the agreed planning, reporting, advisory or documentation support.",
+      "W Projects provides the agreed planning, reporting, advisory or documentation support.",
   },
   {
     number: "04",

@@ -10,8 +10,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "WARIKOO Projects Ltd",
-  description: "Experienced project support. Without the full-time overhead.",
+  title: "W Projects | Project Delivery & Advisory",
+  description: "W Projects provides project planning, controls, construction advisory, HSE and documentation support across the UK. Experienced support without the full-time overhead.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

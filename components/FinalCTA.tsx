@@ -12,7 +12,7 @@ export default function FinalCTA({ contactHref }: { contactHref: string }) {
           <div className="lg:col-span-8">
             <h2
               id="contact-heading"
-              className="max-w-[18ch] text-[clamp(2.75rem,6vw,5.5rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance"
+              className="max-w-[18ch] text-[clamp(2.4475rem,5.34vw,4.895rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance"
             >
               Have a project that needs additional support?
             </h2>
@@ -23,8 +23,7 @@ export default function FinalCTA({ contactHref }: { contactHref: string }) {
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="max-w-[38rem] text-base leading-[1.8] text-muted sm:text-lg">
               Tell us about your project, current challenges and where you need
-              support. We can discuss the requirement and determine how WARIKOO
-              Projects may be able to assist.
+              support. We can discuss how W Projects may be able to assist.
             </p>
             <div className="mt-8 flex flex-col items-start gap-5 min-[420px]:flex-row min-[420px]:items-center min-[420px]:gap-7 sm:mt-10">
               <Link

@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) notFound();
 
   return {
-    title: `${service.title} | WARIKOO Projects Ltd`,
-    description: `${service.introduction} Available to construction clients across the UK.`,
+    title: `${service.title} | W Projects`,
+    description: `${service.introduction} W Projects supports construction clients across the UK.`,
   };
 }
 

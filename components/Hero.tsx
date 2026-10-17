@@ -10,18 +10,17 @@ export default function Hero({ contactHref }: { contactHref: string }) {
       <h1
         id="hero-heading"
         data-hero-part="headline"
-        className="max-w-[22ch] text-[clamp(2.5rem,6vw,5.25rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance"
+        className="max-w-[22ch] text-[clamp(2.15rem,5.16vw,4.515rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance"
       >
         <span className="block">Experienced project support.</span>
-        <span className="block">Without the full-time overhead.</span>
+        <span className="block">Without the <span className="whitespace-nowrap">full-time</span> overhead.</span>
       </h1>
       <div className="mt-8 grid gap-8 sm:mt-10 lg:mt-12 lg:grid-cols-12">
         <div className="lg:col-span-7 lg:col-start-6">
           <p data-hero-part="copy" className="max-w-[42rem] text-base leading-[1.8] text-muted sm:text-lg">
-            WARIKOO Projects provides flexible project planning, project controls,
-            construction advisory, HSE and documentation support for construction businesses
-            that need experienced project expertise without the commitment of a
-            full-time hire.
+            W Projects provides flexible project planning, project controls,
+            construction advisory, HSE and documentation support for construction
+            businesses that need additional project expertise.
           </p>
           <div data-hero-part="actions" className="mt-7 flex flex-col items-start gap-5 min-[420px]:flex-row min-[420px]:items-center min-[420px]:gap-7 sm:mt-8">
             <Link

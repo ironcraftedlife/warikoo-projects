@@ -32,7 +32,7 @@ export default function WhyWarikoo() {
         <div data-reveal="intro" className="grid gap-7 border-t border-border pt-5 lg:grid-cols-12">
           <p data-reveal-part="label" className="section-label lg:col-span-4">
             <span aria-hidden="true" className="section-label-rule" />
-            WHY WARIKOO
+            WHY W PROJECTS
           </p>
           <div className="lg:col-span-8">
             <h2
@@ -42,9 +42,9 @@ export default function WhyWarikoo() {
               Senior project expertise. Built around what you need.
             </h2>
             <p data-reveal-part="copy" className="mt-7 max-w-[42rem] text-base leading-[1.75] text-muted sm:mt-9 sm:text-lg">
-              WARIKOO Projects provides experienced project support without the
-              overhead of adding permanent resource. Engagements can be shaped
-              around a specific deliverable, project stage or ongoing requirement.
+              W Projects combines an independent perspective with practical
+              planning, reporting and documentation support, shaped around your
+              project requirements.
             </p>
           </div>
         </div>

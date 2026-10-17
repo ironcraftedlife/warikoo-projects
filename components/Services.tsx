@@ -35,7 +35,7 @@ export default function Services() {
               <span id={`service-${service.number}-number`} className="pt-1 text-xs font-medium tracking-[0.1em] text-muted lg:col-span-1">
                 {service.number}
               </span>
-              <span id={`service-${service.number}-title`} className="max-w-[23ch] text-[clamp(1.5rem,2.5vw,2.25rem)] leading-[1.2] font-medium tracking-[-0.035em] lg:col-span-5">
+              <span id={`service-${service.number}-title`} className="max-w-[23ch] text-[clamp(1.425rem,2.375vw,2.1375rem)] leading-[1.2] font-medium tracking-[-0.035em] lg:col-span-5">
                 {service.title}
               </span>
               <span className="col-start-2 max-w-[27rem] text-base leading-[1.7] text-muted lg:col-span-5 lg:col-start-7 lg:row-start-1 lg:self-center">

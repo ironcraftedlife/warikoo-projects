@@ -6,9 +6,9 @@ import FinalCTA from "@/components/FinalCTA";
 import { services } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "Services | WARIKOO Projects Ltd",
+  title: "Services | W Projects",
   description:
-    "Flexible project planning, controls, construction advisory, HSE and documentation support for construction clients across the UK.",
+    "Explore W Projects services: project planning, controls, construction advisory, HSE and documentation support for construction clients across the UK.",
 };
 
 export default function ServicesPage() {
@@ -21,13 +21,13 @@ export default function ServicesPage() {
             <span aria-hidden="true" className="section-label-rule" />
             SERVICES
           </p>
-          <h1 id="services-page-heading" className="max-w-[20ch] text-[clamp(2.75rem,6vw,5.25rem)] leading-[1.08] font-medium tracking-[-0.055em]">
+          <h1 id="services-page-heading" className="max-w-[20ch] text-[clamp(2.42rem,5.28vw,4.62rem)] leading-[1.08] font-medium tracking-[-0.055em]">
             Project expertise<br />where you need it.
           </h1>
           <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
             <div className="max-w-[40rem] space-y-5 text-base leading-[1.8] text-muted sm:text-lg lg:col-span-7 lg:col-start-6">
               <p>
-                WARIKOO Projects provides flexible planning, project controls,
+                W Projects provides planning, project controls,
                 construction advisory, HSE and documentation support for
                 construction clients across the UK.
               </p>
@@ -47,7 +47,7 @@ export default function ServicesPage() {
                   SERVICE <span className="ml-3 text-accent">{service.number}</span>
                 </p>
                 <div className="min-w-0 lg:col-span-8">
-                  <h2 id={`service-${service.number}-heading`} className="max-w-[24ch] text-[clamp(2rem,3.75vw,3.25rem)] leading-[1.15] font-medium tracking-[-0.045em] text-balance">
+                  <h2 id={`service-${service.number}-heading`} className="max-w-[24ch] text-[clamp(1.8rem,3.375vw,2.925rem)] leading-[1.15] font-medium tracking-[-0.045em] text-balance">
                     {service.title}
                   </h2>
                   <div className="mt-7 grid gap-7 sm:mt-9 sm:grid-cols-2 sm:gap-9">

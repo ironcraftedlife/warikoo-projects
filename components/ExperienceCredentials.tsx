@@ -21,16 +21,15 @@ export default function ExperienceCredentials() {
           </p>
           <div className="lg:col-span-8">
             <h2 id="experience-heading" data-reveal-part="heading" className="section-heading max-w-[18ch]">
-              Experienced project knowledge. Delivered personally.
+              Specialist project knowledge. Flexible delivery.
             </h2>
             <div data-reveal-part="copy" className="mt-7 max-w-[42rem] space-y-5 text-base leading-[1.75] text-muted sm:mt-9 sm:text-lg">
               <p>
-                WARIKOO Projects brings professional project planning, controls,
-                construction and HSE knowledge directly to clients who need
-                additional project capability without adding permanent resource.
+                W Projects draws on professional project planning, controls,
+                construction and HSE knowledge to support client delivery.
               </p>
               <p>
-                The professional background behind WARIKOO Projects includes
+                The professional background informing W Projects includes
                 construction projects within the energy sector, including Oil
                 &amp; Gas and Nuclear, with knowledge relevant to construction
                 projects more broadly.
@@ -43,7 +42,11 @@ export default function ExperienceCredentials() {
           </div>
         </div>
 
-        <ul aria-label="Confirmed credentials" className="mt-14 border-b border-border sm:mt-20 sm:grid sm:grid-cols-3 sm:gap-x-8">
+        <p className="mt-10 max-w-[42rem] text-sm leading-[1.7] text-muted">
+          The following are individual professional credentials informing W
+          Projects, rather than company accreditations.
+        </p>
+        <ul aria-label="Individual professional credentials" className="mt-14 border-b border-border sm:mt-20 sm:grid sm:grid-cols-3 sm:gap-x-8">
           {credentials.map((credential) => (
             <li key={credential.title} className="border-t border-border py-7 sm:py-9">
               <p className="text-[clamp(1.25rem,1.8vw,1.75rem)] leading-[1.3] font-medium tracking-[-0.025em] uppercase">
@@ -57,7 +60,6 @@ export default function ExperienceCredentials() {
             </li>
           ))}
         </ul>
-        {/* Add a separate experience subsection here when approved copy is available. */}
       </div>
     </section>
   );

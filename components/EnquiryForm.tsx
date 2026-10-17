@@ -81,7 +81,7 @@ export default function EnquiryForm() {
       aria-describedby="submission-notice"
     >
       <p id="submission-notice" className="mb-8 text-sm leading-[1.6] text-muted">
-        Online submission is currently unavailable. This form will not send your details.
+        Preview form — online submission is unavailable. Your details will not be sent.
       </p>
       {Object.keys(errors).length > 0 && (
         <p role="alert" className="mb-7 border-l-2 border-accent pl-3 text-base">

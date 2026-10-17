@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navigation = [
@@ -48,10 +49,17 @@ export default function Header({ contactHref }: { contactHref: string }) {
       <div className="header-row flex min-h-20 flex-wrap items-center justify-between gap-x-6 lg:min-h-24 lg:flex-nowrap">
         <Link
           href="/"
-          className="py-4 text-sm font-semibold tracking-[0.08em] sm:text-base"
-          aria-label="WARIKOO Projects home"
+          className="flex min-h-11 shrink-0 items-center py-2"
+          aria-label="W Projects — Home"
         >
-          WARIKOO PROJECTS
+          <Image
+            src="/brand/warikoo-monogram-header.svg"
+            alt=""
+            width={431}
+            height={456}
+            unoptimized
+            className="h-10 w-auto lg:h-12"
+          />
         </Link>
         <button
           ref={menuButton}

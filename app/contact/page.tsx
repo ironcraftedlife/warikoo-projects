@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 import EnquiryForm from "@/components/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: "Contact | WARIKOO Projects Ltd",
-  description: "Discuss project planning, controls, construction advisory, HSE or documentation support for your construction project.",
+  title: "Contact | W Projects",
+  description: "Discuss project planning, controls, construction advisory, HSE or documentation support with W Projects. UK-wide remote support and site visits by prior arrangement.",
 };
 
 export default function ContactPage() {
@@ -19,16 +19,15 @@ export default function ContactPage() {
               <span aria-hidden="true" className="section-label-rule" />
               START A CONVERSATION
             </p>
-            <h1 className="text-[clamp(2.75rem,5.5vw,4.75rem)] leading-[1.08] font-medium tracking-[-0.055em]">
+            <h1 className="text-[clamp(2.42rem,4.84vw,4.18rem)] leading-[1.08] font-medium tracking-[-0.055em]">
               Tell us about<br />your project.
             </h1>
             <p className="mt-7 max-w-[35rem] text-base leading-[1.75] text-muted sm:text-lg">
-              Whether you need support with a specific deliverable, project stage
-              or ongoing requirement, tell us a little about the project and
-              where additional support is needed.
+              Tell us about the project, the current challenges and the support
+              you need.
             </p>
             <p className="mt-9 max-w-[35rem] border-t border-border pt-5 text-base leading-[1.75] text-muted">
-              WARIKOO Projects supports construction clients across the UK, with
+              W Projects supports construction clients across the UK, with
               services delivered primarily remotely and site visits available by
               prior arrangement.
             </p>

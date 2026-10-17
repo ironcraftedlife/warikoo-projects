@@ -24,11 +24,9 @@ export default function Positioning() {
                 or engaging a large consultancy.
               </p>
               <p>
-                WARIKOO Projects provides flexible support through one-off
-                reviews, specific deliverables, project-stage support and ongoing
-                or retained support where appropriate — giving clients
-                access to experienced planning, controls, advisory, HSE and
-                documentation support when it is needed.
+                W Projects supports one-off reviews, specific deliverables,
+                individual project stages and ongoing or retained requirements
+                where appropriate.
               </p>
             </div>
           </div>
