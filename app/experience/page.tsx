@@ -1,21 +1,45 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FinalCTA from "@/components/FinalCTA";
-import { experienceCategories, projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Project Experience | WProjects",
+  title: "Experience & Expertise | WProjects",
   description:
-    "Previous professional experience informing WProjects across shutdown and turnaround projects, equipment replacement and heavy lifts, and marine and capital infrastructure.",
+    "Remote project advisory backed by first-hand construction and capital project experience, with planning, project management and HSE support from WProjects.",
 };
 
-function ProjectDescription({ text }: { text: string }) {
-  const parts = text.split(/(1,200\+ personnel|8\u201312-week shutdown window|1,350-tonne crawler crane|500-tonne mobile crane)/);
-  return parts.map((part, index) => index % 2 === 1
-    ? <strong key={index} className="font-medium text-foreground">{part}</strong>
-    : part);
-}
+const background = [
+  "6+ years in construction management",
+  "PMP and NEBOSH qualified",
+  "10+ years of planning experience within our team",
+  "Industrial and energy project environments",
+];
+
+const experience = [
+  {
+    title: "Complex, time-critical projects",
+    description:
+      "We've worked on projects where tight windows, multiple contractors and safety-critical constraints all had to be managed together. We use that experience to help clients test their plans, spot risks early and keep programmes realistic.",
+  },
+  {
+    title: "Capital project environments",
+    description:
+      "Long, multi-discipline projects need clear scope, good controls and honest reporting. We bring that perspective to project management reviews, controls and reporting.",
+  },
+  {
+    title: "Safety-led thinking",
+    description:
+      "Our HSE background means safety is considered at the planning stage, not left until later.",
+  },
+];
+
+const principles = [
+  { title: "Practical.", description: "We focus on what can be delivered safely and on programme." },
+  { title: "Independent.", description: "We give clear, honest views to support your decisions." },
+  { title: "Flexible.", description: "Remote support that scales to the size and needs of your project." },
+];
 
 export default function ExperiencePage() {
   return (
@@ -25,81 +49,101 @@ export default function ExperiencePage() {
         <section aria-labelledby="experience-page-heading" className="site-container section-spacing">
           <p className="section-label mb-8 sm:mb-10">
             <span aria-hidden="true" className="section-label-rule" />
-            EXPERIENCE
+            EXPERIENCE &amp; EXPERTISE
           </p>
           <h1 id="experience-page-heading" className="max-w-[23ch] text-[clamp(2.2rem,4.8vw,4.2rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
-            Experience shaped by complex project delivery.
+            Advice grounded in real project delivery.
           </h1>
           <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
             <p className="max-w-[40rem] text-base leading-[1.8] text-muted sm:text-lg lg:col-span-7 lg:col-start-6">
-              Previous professional experience in refinery shutdowns, equipment
-              replacement, heavy-lift construction and marine infrastructure
-              informs the project support provided by WProjects.
+              WProjects is a remote advisory firm providing practical project
+              support, backed by first-hand experience of how complex construction
+              and capital projects are planned, controlled and delivered.
             </p>
           </div>
+          <div className="mt-14 sm:mt-20">
+            <h2 className="section-label">Background at a glance</h2>
+            <ul className="mt-6 grid gap-x-8 border-b border-border sm:grid-cols-2 lg:grid-cols-4">
+              {background.map((fact) => (
+                <li key={fact} className="border-t border-border py-6 text-xl leading-[1.4] font-medium tracking-[-0.025em] sm:py-8">
+                  {fact}
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
-        <section aria-labelledby="selected-projects-heading" className="bg-surface">
+        <div className="bg-surface">
           <div className="site-container section-spacing">
-            <div data-reveal="intro" className="grid gap-7 lg:grid-cols-12">
-              <h2 id="selected-projects-heading" data-reveal-part="label" className="section-label lg:col-span-4">
-                <span aria-hidden="true" className="section-label-rule" />
-                RELEVANT PROJECT CAPABILITIES
+            <section aria-labelledby="advice-experience-heading">
+              <h2 id="advice-experience-heading" className="section-heading max-w-[22ch]">
+                The experience behind our advice
               </h2>
-              <p data-reveal-part="copy" className="max-w-[40rem] text-sm leading-[1.7] text-muted lg:col-span-8">
-                These examples represent previous professional experience
-                informing WProjects. They are not presented as contracts
-                awarded to WProjects.
-              </p>
-            </div>
-
-            <div className="mt-12 sm:mt-16 lg:mt-20">
-              {experienceCategories.map((category) => (
-                <section key={category.id} aria-labelledby={`${category.id}-heading`} className="border-t border-border py-9 sm:py-12 lg:py-14">
-                  <div data-reveal="intro" className="grid gap-7 lg:grid-cols-12">
-                    <p data-reveal-part="label" className="section-label uppercase lg:col-span-4">
-                      {category.title}
+              <ul className="mt-10 grid gap-x-8 sm:mt-14 md:grid-cols-3 lg:gap-x-12">
+                {experience.map((item) => (
+                  <li key={item.title} className="border-t border-border py-7 sm:py-9">
+                    <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] leading-[1.2] font-medium tracking-[-0.035em]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-5 max-w-[40rem] text-base leading-[1.75] text-muted">
+                      {item.description}
                     </p>
-                    <div className="min-w-0 lg:col-span-8">
-                      <h2 id={`${category.id}-heading`} data-reveal-part="heading" className="section-heading max-w-[18ch]">
-                        {category.headline}
-                      </h2>
-                      <p data-reveal-part="copy" className="mt-7 max-w-[40rem] text-base leading-[1.75] text-muted sm:text-lg">
-                        {category.description}
-                      </p>
-                    </div>
-                  </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+            <section aria-labelledby="planning-heading" className="mt-10 grid gap-8 border-t border-border pt-8 sm:mt-14 sm:pt-10 lg:grid-cols-12 lg:gap-7">
+              <h2 id="planning-heading" className="section-heading max-w-[18ch] lg:col-span-5">
+                Our planning support
+              </h2>
+              <p className="max-w-[40rem] text-base leading-[1.8] text-muted sm:text-lg lg:col-span-6 lg:col-start-7">
+                Planning is led by an experienced planning professional with over
+                10 years of experience, who is part of the WProjects team. They
+                develop and review programmes, support schedule development and
+                help keep project timelines clear and credible. Combined with our
+                project management and HSE experience, this gives clients planning
+                support backed by an understanding of how the work is actually
+                delivered.
+              </p>
+            </section>
+          </div>
+        </div>
 
-                  <ul data-reveal-group className="mt-9 sm:mt-12">
-                    {projects.filter((project) => category.projectNumbers.includes(project.number)).map((project) => (
-                      <li data-reveal="row" data-reveal-sequence key={project.number} className="grid gap-6 border-t border-border py-7 sm:py-9 lg:grid-cols-12 lg:gap-7">
-                        <div data-reveal-part="heading" className="min-w-0 lg:col-span-4">
-                          <h3 className="max-w-[24ch] text-[clamp(1.5rem,2.5vw,2.25rem)] leading-[1.2] font-medium tracking-[-0.035em] text-balance">
-                            {project.title}
-                          </h3>
-                          <p className="mt-4 text-sm leading-[1.6] text-muted">
-                            Project value: {project.value}
-                          </p>
-                        </div>
-                        <div data-reveal-part="copy" className="min-w-0 max-w-[40rem] lg:col-span-7 lg:col-start-6">
-                          <p className="text-base leading-[1.8] text-muted sm:text-lg"><ProjectDescription text={project.description} /></p>
-                          {project.facts.length > 0 && (
-                            <ul aria-label="Project facts" className="mt-6 flex flex-wrap gap-x-8 gap-y-3 text-base font-medium leading-[1.6]">
-                              {project.facts.map((fact) => (
-                                <li key={fact} className="border-l border-accent pl-3">{fact}</li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              ))}
+        <section aria-labelledby="principles-heading" className="site-container section-spacing">
+          <h2 id="principles-heading" className="section-heading max-w-[22ch]">
+            How this shapes our advice
+          </h2>
+          <ul className="mt-10 grid gap-x-8 sm:mt-14 md:grid-cols-3 lg:gap-x-12">
+            {principles.map((principle) => (
+              <li key={principle.title} className="border-t border-border py-7 sm:py-9">
+                <h3 className="text-[clamp(1.5rem,2.5vw,2rem)] leading-[1.2] font-medium tracking-[-0.035em]">
+                  {principle.title}
+                </h3>
+                <p className="mt-5 max-w-[28rem] text-base leading-[1.75] text-muted">
+                  {principle.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="services-link-heading" className="bg-surface">
+          <div className="site-container py-10 sm:py-14">
+            <div className="grid gap-7 border-t border-border pt-5 lg:grid-cols-12">
+              <h2 id="services-link-heading" className="section-label lg:col-span-4">See how we can help</h2>
+              <div className="lg:col-span-8">
+                <p className="text-base leading-[1.75] text-muted sm:text-lg">Our experience supports the services we offer.</p>
+                <Link href="/services" className="nav-link mt-5 inline-flex min-h-11 w-fit items-center gap-7 border-b border-border text-sm font-medium">
+                  View Our Services <span aria-hidden="true" className="motion-arrow text-accent">→</span>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
-        <FinalCTA contactHref="/contact" />
+        <FinalCTA
+          contactHref="/contact"
+          description="Tell us about your project and where you need help. We'll talk through how WProjects can assist."
+        />
       </main>
       <Footer />
     </>

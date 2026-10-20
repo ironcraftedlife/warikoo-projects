@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-export default function FinalCTA({ contactHref }: { contactHref: string }) {
+export default function FinalCTA({
+  contactHref,
+  description = "Discuss the support your project needs and how WProjects may be able to assist.",
+}: {
+  contactHref: string;
+  description?: string;
+}) {
   return (
     <section data-reveal="cta" id="contact" aria-labelledby="contact-heading" className="bg-background scroll-mt-8">
       <div className="site-container section-spacing">
@@ -22,8 +28,7 @@ export default function FinalCTA({ contactHref }: { contactHref: string }) {
         <div className="mt-10 grid gap-7 sm:mt-14 lg:mt-20 lg:grid-cols-12">
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="max-w-[38rem] text-base leading-[1.8] text-muted sm:text-lg">
-              Discuss the support your project needs and how WProjects may be
-              able to assist.
+              {description}
             </p>
             <div className="mt-8 flex flex-col items-start gap-5 min-[420px]:flex-row min-[420px]:items-center min-[420px]:gap-7 sm:mt-10">
               <Link

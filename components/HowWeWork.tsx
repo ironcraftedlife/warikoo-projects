@@ -21,7 +21,7 @@ const steps = [
     number: "04",
     title: "Support",
     description:
-      "Ongoing support can be provided where required, with site visits arranged when necessary.",
+      "Ongoing remote support can be provided where required, with site visits by prior arrangement.",
   },
 ];
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const industries = ["Construction", "Energy", "Oil & Gas", "Nuclear"];
+const sectors = ["Construction", "Energy", "Oil & Gas"];
 
 export default function Footer() {
   return (
@@ -17,7 +17,7 @@ export default function Footer() {
             </p>
             <ul className="text-base lg:text-sm">
               <li><Link href="/services" className="inline-flex min-h-11 items-center hover:text-accent">Services</Link></li>
-              <li><Link href="/experience" className="inline-flex min-h-11 items-center hover:text-accent">Experience</Link></li>
+              <li><Link href="/experience" className="inline-flex min-h-11 items-center hover:text-accent">Experience &amp; Expertise</Link></li>
               <li><Link href="/#about" className="inline-flex min-h-11 items-center hover:text-accent">About</Link></li>
               <li><Link href="/#how-we-work" className="inline-flex min-h-11 items-center hover:text-accent">How We Work</Link></li>
               <li><Link href="/contact" className="inline-flex min-h-11 items-center hover:text-accent">Contact</Link></li>
@@ -25,10 +25,10 @@ export default function Footer() {
           </nav>
           <div className="lg:col-span-3">
             <p className="section-label mb-5 text-white/60">
-              INDUSTRIES
+              SECTORS WE SUPPORT
             </p>
             <ul className="space-y-3 text-base lg:text-sm">
-              {industries.map((industry) => <li key={industry}>{industry}</li>)}
+              {sectors.map((sector) => <li key={sector}>{sector}</li>)}
             </ul>
           </div>
         </div>

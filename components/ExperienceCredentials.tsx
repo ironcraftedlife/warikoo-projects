@@ -25,14 +25,14 @@ export default function ExperienceCredentials() {
             </h2>
             <div data-reveal-part="copy" className="mt-7 max-w-[42rem] space-y-5 text-base leading-[1.75] text-muted sm:mt-9 sm:text-lg">
               <p>
-                WProjects draws on professional project planning, controls,
-                construction and HSE knowledge to support client delivery.
+                WProjects brings together construction management, project
+                planning, controls and HSE knowledge to provide practical,
+                remote-first advice.
               </p>
               <p>
-                The professional background informing WProjects includes
-                construction projects within the energy sector, including Oil
-                &amp; Gas and Nuclear, with knowledge relevant to construction
-                projects more broadly.
+                First-hand experience of industrial and energy capital projects
+                informs programme reviews, project management and safety-led
+                planning.
               </p>
               <p>
                 Support is delivered primarily remotely across the UK, with
