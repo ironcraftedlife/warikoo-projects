@@ -1,6 +1,7 @@
 import Link from "next/link";
-import ServicePhoto from "./ServicePhoto";
+import CapabilityAccordion from "./CapabilityAccordion";
 import type { Service } from "@/lib/services";
+import { capabilityDescriptions } from "@/lib/service-capability-descriptions";
 
 const engagementOptions = [
   "A specific deliverable",
@@ -12,7 +13,7 @@ const engagementOptions = [
 export default function ServiceDetail({ service, nextService }: { service: Service; nextService?: Service }) {
   return (
     <>
-      <section aria-labelledby="service-heading" className="site-container section-spacing">
+      <section aria-labelledby="service-heading" className="site-container pt-10 pb-8 sm:pt-14 sm:pb-10 lg:pt-16">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-x-8 gap-y-4 sm:mb-10">
           <p className="section-label">
             <span aria-hidden="true" className="section-label-rule" />
@@ -23,27 +24,25 @@ export default function ServiceDetail({ service, nextService }: { service: Servi
         <h1 id="service-heading" className="max-w-[24ch] text-[clamp(2rem,4.8vw,4.2rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
           {service.title}
         </h1>
-        <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
-          <p className="max-w-[40rem] text-base leading-[1.8] text-muted sm:text-lg lg:col-span-7 lg:col-start-6">
+        <div className="mt-8 grid sm:mt-10 lg:grid-cols-12 lg:gap-7">
+          <p className="max-w-[40rem] text-base leading-[1.8] text-muted sm:text-lg lg:col-span-8 lg:col-start-5">
             {service.introduction}
           </p>
         </div>
-        <ServicePhoto slug={service.slug} />
       </section>
 
       <section aria-labelledby="support-heading" className="bg-surface">
-        <div className="site-container section-spacing grid gap-8 lg:grid-cols-12 lg:gap-7">
+        <div className="site-container grid gap-6 pt-8 pb-12 sm:gap-8 sm:pt-10 sm:pb-16 lg:grid-cols-12 lg:gap-7">
           <h2 id="support-heading" className="section-label lg:col-span-4">
             <span aria-hidden="true" className="section-label-rule" />
             WHAT WE SUPPORT
           </h2>
-          <ul data-reveal="row" data-reveal-rule className="min-w-0 border-t border-border lg:col-span-8">
-            {service.capabilities.map((capability) => (
-              <li key={capability} className="border-b border-border py-6 text-[clamp(1.25rem,2.1vw,1.75rem)] leading-[1.4] tracking-[-0.02em] sm:py-7">
-                {capability}
-              </li>
-            ))}
-          </ul>
+          <div data-reveal="row" data-reveal-rule className="min-w-0 lg:col-span-8">
+            <CapabilityAccordion items={service.capabilities.map((title) => ({
+              title,
+              description: capabilityDescriptions[title],
+            }))} />
+          </div>
         </div>
       </section>
 

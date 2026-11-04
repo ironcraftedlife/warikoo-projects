@@ -35,7 +35,7 @@ export default function Hero({ contactHref }: { contactHref: string }) {
           </div>
         </div>
       </div>
-      <ul data-hero-part="industries" aria-label="Sectors we support" className="mt-14 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border py-6 text-xs font-medium tracking-[0.1em] sm:mt-16 sm:grid-cols-3 sm:py-7 sm:tracking-[0.12em] lg:mt-20">
+      <ul data-hero-part="industries" aria-label="Sectors we support" className="mt-14 flex flex-wrap justify-center gap-x-6 gap-y-4 border-t border-border py-6 text-center text-xs font-medium tracking-[0.1em] sm:mt-16 sm:gap-x-12 sm:py-7 sm:tracking-[0.12em] lg:mt-20 lg:gap-x-16">
         <li>CONSTRUCTION</li>
         <li>ENERGY</li>
         <li>OIL &amp; GAS</li>

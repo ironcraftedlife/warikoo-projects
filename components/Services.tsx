@@ -32,19 +32,19 @@ export default function Services() {
         {services.map((service) => (
           <ServiceAccordion key={service.number} id={`service-${service.number}`} summary={
             <>
-              <span id={`service-${service.number}-number`} className="pt-1 text-xs font-medium tracking-[0.1em] text-muted lg:col-span-1">
+              <span id={`service-${service.number}-number`} className="col-start-1 row-start-1 pt-1 text-base font-medium tracking-[0.1em] text-muted">
                 {service.number}
               </span>
-              <span id={`service-${service.number}-title`} className="max-w-[23ch] text-[clamp(1.425rem,2.375vw,2.1375rem)] leading-[1.2] font-medium tracking-[-0.035em] lg:col-span-5">
+              <span id={`service-${service.number}-title`} className="col-start-2 row-start-1 max-w-[23ch] pr-8 text-[clamp(1.425rem,2.375vw,2.1375rem)] leading-[1.2] font-medium tracking-[-0.035em] lg:col-span-5 lg:pr-0">
                 {service.title}
               </span>
-              <span className="col-start-2 max-w-[27rem] text-base leading-[1.7] text-muted lg:col-span-5 lg:col-start-7 lg:row-start-1 lg:self-center">
+              <span className="col-start-2 row-start-2 max-w-[27rem] pr-8 text-base leading-[1.7] text-muted lg:col-span-5 lg:col-start-7 lg:row-start-1 lg:self-center lg:pr-0">
                 {service.homepageDescription}
               </span>
             </>
           }>
-            <div className="grid pb-9 pl-[3.25rem] sm:pl-[5rem] lg:grid-cols-12 lg:pb-11 lg:pl-0">
-              <div className="lg:col-span-6 lg:col-start-7">
+            <div className="pb-9 pr-8 pl-[3.25rem] sm:pl-[5rem] lg:grid lg:grid-cols-12 lg:gap-x-5 lg:pb-11 lg:pr-0 lg:pl-0">
+              <div className="max-w-[48rem] lg:col-span-6 lg:col-start-7">
                 <p className="section-label mb-4 text-muted">
                   CAPABILITIES
                 </p>

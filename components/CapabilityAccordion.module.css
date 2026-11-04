@@ -1,0 +1,34 @@
+.item {
+  border-bottom: 1px solid var(--border);
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms var(--motion-ease);
+}
+
+.clip {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.description {
+  opacity: 0;
+  transition: opacity 200ms var(--motion-ease);
+}
+
+.item[data-open="true"] .panel {
+  grid-template-rows: 1fr;
+}
+
+.item[data-open="true"] .description {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .description {
+    transition: none;
+  }
+}
