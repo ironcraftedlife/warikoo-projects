@@ -40,6 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Temporary unlicensed local video prototype — never commit these assets
-/public/videos/wprojects-preview.mp4
-/public/videos/wprojects-preview-poster.jpg
+
