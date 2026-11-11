@@ -30,23 +30,23 @@ export default function Header({ contactHref, cinematic = false }: { contactHref
   }, []);
 
   useEffect(() => {
-    if (!cinematic || !header.current) return;
-    const hero = document.querySelector("[data-cinematic-hero]");
-    if (!hero) return;
     const element = header.current;
-    let observer: IntersectionObserver;
-    function observeHero() {
-      observer?.disconnect();
-      const height = element.getBoundingClientRect().height;
-      observer = new IntersectionObserver(([entry]) => {
-        element.dataset.overHero = String(entry.isIntersecting);
-      }, { rootMargin: `-${height}px 0px 0px 0px` });
-      observer.observe(hero!);
+    if (!cinematic || !element) return;
+    let frame = 0;
+    function update() {
+      frame = 0;
+      element!.dataset.headerState = window.scrollY >= 64
+        ? "solid-after-scroll" : "transparent-over-video";
     }
-    observeHero();
-    const resizeObserver = new ResizeObserver(observeHero);
-    resizeObserver.observe(element);
-    return () => { observer.disconnect(); resizeObserver.disconnect(); };
+    function onScroll() {
+      if (!frame) frame = requestAnimationFrame(update);
+    }
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(frame);
+    };
   }, [cinematic, pathname]);
 
   return (
@@ -55,7 +55,7 @@ export default function Header({ contactHref, cinematic = false }: { contactHref
     <header
       ref={header}
       data-cinematic={cinematic}
-      data-over-hero={cinematic ? "true" : undefined}
+      data-header-state={cinematic ? "transparent-over-video" : "solid-after-scroll"}
       className={`site-header ${isOpen ? "header-menu-open" : ""}`}
       onKeyDown={(event) => {
         if (event.key === "Escape" && isOpen) {
@@ -71,7 +71,7 @@ export default function Header({ contactHref, cinematic = false }: { contactHref
       <div className="header-row flex min-h-20 flex-wrap items-center justify-between gap-x-6 lg:min-h-24 lg:flex-nowrap">
         <Link
           href="/"
-          className="flex min-h-11 shrink-0 items-center py-2"
+          className="header-brand flex min-h-11 shrink-0 items-center py-2"
           aria-label="WProjects — Home"
         >
           <Image
