@@ -1,24 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./Footer.module.css";
 
 const sectors = ["Construction", "Energy", "Oil & Gas"];
 
 export default function Footer() {
   return (
-    <footer className="bg-background text-foreground">
-      <div className="site-container pt-10 pb-6 sm:pt-14 sm:pb-8">
-        <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
-          <div className="sm:col-span-2 lg:col-span-6">
-            <Link href="/" aria-label="WProjects home" className="block w-[160px] max-w-full sm:w-[180px]">
-              <Image src="/brand/warikoo-logo-original.svg" alt="WARIKOO Projects — Plan, Control, Deliver" width={1254} height={1254} unoptimized className="h-auto w-full" />
-            </Link>
-            <p className="mt-4 max-w-[24rem] text-base leading-[1.75] text-muted lg:pr-8">
-              WProjects provides project planning, controls, construction advisory,
-              HSE and documentation support.
-            </p>
-          </div>
-          <nav aria-label="Footer navigation" className="lg:col-span-3">
-            <p className="section-label mb-5 text-muted">
+    <footer className={styles.footer}>
+      <div className={`site-container ${styles.grid}`}>
+        <div className={styles.brand}>
+          <Link href="/" aria-label="WProjects home" className="block w-[180px] max-w-full">
+            <Image src="/brand/warikoo-logo-original.svg" alt="WARIKOO Projects — Plan, Control, Deliver" width={1254} height={1254} unoptimized className="h-auto w-full" />
+          </Link>
+          <p className="mt-3 max-w-[24rem] text-base leading-[1.75] text-muted">
+            WProjects provides project planning, controls, construction advisory,
+            HSE and documentation support.
+          </p>
+        </div>
+        <div className={styles.navigation}>
+          <div className={styles.links}>
+          <nav aria-label="Footer navigation">
+            <p className="section-label mb-5 text-white/65">
               NAVIGATION
             </p>
             <ul className="text-base lg:text-sm">
@@ -29,18 +31,20 @@ export default function Footer() {
               <li><Link href="/contact" className="inline-flex min-h-11 items-center hover:text-accent">Contact</Link></li>
             </ul>
           </nav>
-          <div className="lg:col-span-3">
-            <p className="section-label mb-5 text-muted">
+          <div>
+            <p className="section-label mb-5 text-white/65">
               SECTORS WE SUPPORT
             </p>
             <ul className="space-y-3 text-base lg:text-sm">
               {sectors.map((sector) => <li key={sector}>{sector}</li>)}
             </ul>
+            <Link href="/contact" className="nav-link mt-6 inline-flex min-h-11 items-center gap-5 border-b border-white/30 text-sm font-medium hover:text-white">Discuss Your Project <span aria-hidden="true" className="motion-arrow text-accent">→</span></Link>
           </div>
+          </div>
+          <p className={`${styles.legal} text-xs text-white/65`}>
+            © {new Date().getFullYear()} WARIKOO Projects Ltd.
+          </p>
         </div>
-        <p className="mt-9 border-t border-border pt-5 text-xs text-muted sm:mt-12">
-          © {new Date().getFullYear()} WARIKOO Projects Ltd.
-        </p>
       </div>
     </footer>
   );

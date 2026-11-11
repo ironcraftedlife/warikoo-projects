@@ -404,14 +404,6 @@
 .site-header[data-header-state="transparent-over-video"] .header-row { transform: none; }
 .site-header[data-header-state="transparent-over-video"] .header-row::after { opacity: 0; }
 
-/* Only the original dark monogram needs a small neutral backing. */
-.site-header[data-header-state="transparent-over-video"] .header-brand::before {
-  position: absolute;
-  inset: 4px -6px;
-  z-index: -1;
-  content: "";
-  background: var(--background);
-}
 .site-header[data-header-state="transparent-over-video"] .project-link {
   color: var(--surface);
   border-color: rgb(255 255 255 / 70%);
