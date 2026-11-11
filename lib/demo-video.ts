@@ -1,3 +1,2 @@
-// Temporary local prototype: off unless explicitly enabled, and never on Vercel.
-export const demoVideoEnabled =
-  process.env.NEXT_PUBLIC_ENABLE_DEMO_VIDEO === "true" && process.env.VERCEL !== "1";
+// Temporary design review: enabled in production until the footage is replaced or removed.
+export const demoVideoEnabled = true;

@@ -55,7 +55,7 @@ export default function DemoVideo() {
           playsInline
           preload="none"
           poster="/videos/wprojects-preview-poster.jpg"
-          aria-label="Temporary local video preview showing transport infrastructure, engineering personnel, architecture and construction. This footage does not depict WProjects projects."
+          aria-label="Temporary design preview showing transport infrastructure, engineering personnel, architecture and construction. This footage does not depict WProjects projects."
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onError={() => setUnavailable(true)}
