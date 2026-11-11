@@ -1,3 +1,5 @@
+import DemoVideo from "@/components/DemoVideo";
+import { demoVideoEnabled } from "@/lib/demo-video";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -16,7 +18,7 @@ export default function ServicesPage() {
     <>
       <Header contactHref="/contact" />
       <main id="main-content" tabIndex={-1}>
-        <section aria-labelledby="services-page-heading" className="site-container section-spacing">
+        <section aria-labelledby="services-page-heading" className={demoVideoEnabled ? "site-container pt-10 pb-10 sm:pt-14 sm:pb-12" : "site-container section-spacing"}>
           <p className="section-label mb-8 sm:mb-10">
             <span aria-hidden="true" className="section-label-rule" />
             SERVICES
@@ -37,6 +39,7 @@ export default function ServicesPage() {
               </p>
             </div>
           </div>
+          {demoVideoEnabled && <div className="mt-8 grid lg:grid-cols-12"><div className="max-w-[640px] lg:col-span-7 lg:col-start-6"><DemoVideo /></div></div>}
         </section>
 
         <section aria-label="Our services" className="bg-surface">

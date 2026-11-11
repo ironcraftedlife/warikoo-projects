@@ -1,3 +1,5 @@
+import DemoVideo from "@/components/DemoVideo";
+import { demoVideoEnabled } from "@/lib/demo-video";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -46,7 +48,7 @@ export default function ExperiencePage() {
     <>
       <Header contactHref="/contact" />
       <main id="main-content" tabIndex={-1}>
-        <section aria-labelledby="experience-page-heading" className="site-container section-spacing">
+        <section aria-labelledby="experience-page-heading" className={demoVideoEnabled ? "site-container pt-10 pb-10 sm:pt-14 sm:pb-12" : "site-container section-spacing"}>
           <p className="section-label mb-8 sm:mb-10">
             <span aria-hidden="true" className="section-label-rule" />
             EXPERIENCE &amp; EXPERTISE
@@ -61,7 +63,8 @@ export default function ExperiencePage() {
               and capital projects are planned, controlled and delivered.
             </p>
           </div>
-          <div className="mt-14 sm:mt-20">
+          {demoVideoEnabled && <div className="mt-8 max-w-[640px] sm:mt-10"><DemoVideo /></div>}
+          <div className={demoVideoEnabled ? "mt-8 sm:mt-10" : "mt-14 sm:mt-20"}>
             <h2 className="section-label">Background at a glance</h2>
             <ul className="mt-6 grid gap-x-8 border-b border-border sm:grid-cols-2 lg:grid-cols-4">
               {background.map((fact) => (
