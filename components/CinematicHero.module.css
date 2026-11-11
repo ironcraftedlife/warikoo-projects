@@ -1,0 +1,33 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 90svh;
+  overflow: clip;
+  background: var(--dark);
+  color: var(--surface);
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgb(17 24 32 / 80%), rgb(17 24 32 / 55%) 70%, rgb(17 24 32 / 25%));
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: inherit;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: calc(var(--header-height) + 3rem);
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .hero { min-height: 95svh; }
+  .shade {
+    background: linear-gradient(90deg, rgb(17 24 32 / 78%), rgb(17 24 32 / 55%) 55%, rgb(17 24 32 / 20%));
+  }
+}

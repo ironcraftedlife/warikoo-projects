@@ -1,5 +1,5 @@
-import DemoVideo from "@/components/DemoVideo";
-import { demoVideoEnabled } from "@/lib/demo-video";
+import ServiceOverviewPhoto from "@/components/ServiceOverviewPhoto";
+import CinematicHero from "@/components/CinematicHero";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -16,44 +16,28 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <Header contactHref="/contact" />
+      <Header contactHref="/contact" cinematic />
       <main id="main-content" tabIndex={-1}>
-        <section aria-labelledby="services-page-heading" className={demoVideoEnabled ? "site-container pt-10 pb-10 sm:pt-14 sm:pb-12" : "site-container section-spacing"}>
-          <p className="section-label mb-8 sm:mb-10">
-            <span aria-hidden="true" className="section-label-rule" />
-            SERVICES
-          </p>
-          <h1 id="services-page-heading" className="max-w-[20ch] text-[clamp(2.2rem,4.8vw,4.2rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
-            Project expertise where you need it.
-          </h1>
-          <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
-            <div className="max-w-[40rem] space-y-5 text-base leading-[1.8] text-muted sm:text-lg lg:col-span-7 lg:col-start-6">
-              <p>
-                WProjects provides planning, project controls,
-                construction advisory, HSE and documentation support for
-                construction clients across the UK.
-              </p>
-              <p>
-                Explore the service areas below to identify the support relevant
-                to your project.
-              </p>
-            </div>
+        <CinematicHero id="services-page-heading" eyebrow="SERVICES" title="Project expertise where you need it.">
+          <div className="space-y-5">
+            <p>WProjects provides planning, project controls, construction advisory, HSE and documentation support for construction clients across the UK.</p>
+            <p>Explore the service areas below to identify the support relevant to your project.</p>
           </div>
-          {demoVideoEnabled && <div className="mt-8 grid lg:grid-cols-12"><div className="max-w-[640px] lg:col-span-7 lg:col-start-6"><DemoVideo /></div></div>}
-        </section>
+        </CinematicHero>
 
         <section aria-label="Our services" className="bg-surface">
-          <div data-reveal-group className="site-container py-8 sm:py-12 lg:py-16">
-            {services.map((service) => (
-              <article data-reveal="row" key={service.slug} aria-labelledby={`service-${service.number}-heading`} className="grid gap-6 border-t border-border py-10 sm:py-14 lg:grid-cols-12 lg:gap-7 lg:py-16">
-                <p className="section-label text-muted lg:col-span-4">
-                  SERVICE <span className="text-accent">{service.number}</span>
-                </p>
-                <div className="min-w-0 lg:col-span-8">
+          <div data-reveal-group className="site-container py-4 sm:py-6">
+            {services.map((service, index) => (
+              <article data-reveal="row" key={service.slug} aria-labelledby={`service-${service.number}-heading`} className="grid items-center gap-7 border-t border-border py-8 sm:gap-9 sm:py-12 lg:grid-cols-2 lg:gap-12 lg:py-14 first:border-t-0">
+                <div className={index % 2 === 0 ? "min-w-0" : "min-w-0 lg:col-start-2 lg:row-start-1"}>
+                  <ServiceOverviewPhoto slug={service.slug} />
+                </div>
+                <div className={index % 2 === 0 ? "min-w-0" : "min-w-0 lg:col-start-1 lg:row-start-1"}>
+                  <p className="section-label mb-5 text-muted">SERVICE <span className="text-accent">{service.number}</span></p>
                   <h2 id={`service-${service.number}-heading`} className="max-w-[24ch] text-[clamp(1.8rem,3.375vw,2.925rem)] leading-[1.15] font-medium tracking-[-0.045em] text-balance">
                     {service.title}
                   </h2>
-                  <div className="mt-7 grid gap-7 sm:mt-9 sm:grid-cols-2 sm:gap-9">
+                  <div className="mt-6 grid gap-6 xl:grid-cols-2">
                     <p className="text-base leading-[1.75] text-muted">{service.introduction}</p>
                     <div>
                       <p className="section-label mb-4 text-muted">SELECTED CAPABILITIES</p>

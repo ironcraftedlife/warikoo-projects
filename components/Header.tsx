@@ -13,7 +13,7 @@ const navigation = [
   { label: "Contact", href: "/contact" },
 ];
 
-export default function Header({ contactHref }: { contactHref: string }) {
+export default function Header({ contactHref, cinematic = false }: { contactHref: string; cinematic?: boolean }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -29,11 +29,33 @@ export default function Header({ contactHref }: { contactHref: string }) {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!cinematic || !header.current) return;
+    const hero = document.querySelector("[data-cinematic-hero]");
+    if (!hero) return;
+    const element = header.current;
+    let observer: IntersectionObserver;
+    function observeHero() {
+      observer?.disconnect();
+      const height = element.getBoundingClientRect().height;
+      observer = new IntersectionObserver(([entry]) => {
+        element.dataset.overHero = String(entry.isIntersecting);
+      }, { rootMargin: `-${height}px 0px 0px 0px` });
+      observer.observe(hero!);
+    }
+    observeHero();
+    const resizeObserver = new ResizeObserver(observeHero);
+    resizeObserver.observe(element);
+    return () => { observer.disconnect(); resizeObserver.disconnect(); };
+  }, [cinematic, pathname]);
+
   return (
     <>
     <span ref={sentinel} aria-hidden="true" className="header-sentinel" />
     <header
       ref={header}
+      data-cinematic={cinematic}
+      data-over-hero={cinematic ? "true" : undefined}
       className={`site-header ${isOpen ? "header-menu-open" : ""}`}
       onKeyDown={(event) => {
         if (event.key === "Escape" && isOpen) {

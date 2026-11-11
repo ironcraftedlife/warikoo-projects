@@ -15,7 +15,7 @@ const contactHref = "/contact";
 export default function Home() {
   return (
     <>
-      <Header contactHref={contactHref} />
+      <Header contactHref={contactHref} cinematic />
       <main id="main-content" tabIndex={-1}>
         <Hero contactHref={contactHref} />
         <Positioning />

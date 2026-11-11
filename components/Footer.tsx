@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const sectors = ["Construction", "Energy", "Oil & Gas"];
@@ -5,7 +6,7 @@ const sectors = ["Construction", "Energy", "Oil & Gas"];
 export default function Footer() {
   return (
     <footer className="bg-dark text-surface">
-      <div className="site-container pt-14 pb-7 sm:pt-20 sm:pb-9">
+      <div className="site-container pt-14 pb-10 sm:pt-20 sm:pb-12">
         <div className="grid gap-12 border-t border-white/20 pt-6 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
           <p className="max-w-[24rem] text-base leading-[1.75] text-white/75 sm:col-span-2 lg:col-span-6 lg:pr-16">
             WProjects provides project planning, controls, construction advisory,
@@ -33,16 +34,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/20 pt-6 sm:mt-16 lg:mt-20">
+      </div>
+
+      <div className="bg-background text-foreground">
+        <div className="site-container py-2 sm:py-3">
           <Link
             href="/"
             aria-label="WProjects home"
-            className="flex min-h-11 w-fit items-center text-[clamp(1.75rem,7vw,6.5rem)] leading-none font-medium tracking-[-0.065em]"
+            className="block w-[220px] max-w-full sm:w-[260px]"
           >
-            WProjects
+            <Image src="/brand/warikoo-logo-original.svg" alt="WARIKOO Projects — Plan, Control, Deliver" width={1254} height={1254} unoptimized className="h-auto w-full" />
           </Link>
         </div>
-        <p className="mt-10 border-t border-white/20 pt-5 text-xs text-white/60 sm:mt-14">
+      </div>
+      <div className="site-container py-7 sm:py-9">
+        <p className="text-xs text-white/60">
           © {new Date().getFullYear()} WARIKOO Projects Ltd.
         </p>
       </div>

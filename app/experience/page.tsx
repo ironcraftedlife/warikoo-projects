@@ -1,5 +1,4 @@
-import DemoVideo from "@/components/DemoVideo";
-import { demoVideoEnabled } from "@/lib/demo-video";
+import CinematicHero from "@/components/CinematicHero";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -46,25 +45,13 @@ const principles = [
 export default function ExperiencePage() {
   return (
     <>
-      <Header contactHref="/contact" />
+      <Header contactHref="/contact" cinematic />
       <main id="main-content" tabIndex={-1}>
-        <section aria-labelledby="experience-page-heading" className={demoVideoEnabled ? "site-container pt-10 pb-10 sm:pt-14 sm:pb-12" : "site-container section-spacing"}>
-          <p className="section-label mb-8 sm:mb-10">
-            <span aria-hidden="true" className="section-label-rule" />
-            EXPERIENCE &amp; EXPERTISE
-          </p>
-          <h1 id="experience-page-heading" className="max-w-[23ch] text-[clamp(2.2rem,4.8vw,4.2rem)] leading-[1.08] font-medium tracking-[-0.055em] text-balance">
-            Advice grounded in real project delivery.
-          </h1>
-          <div className="mt-9 grid sm:mt-12 lg:grid-cols-12">
-            <p className="max-w-[40rem] text-base leading-[1.8] text-muted sm:text-lg lg:col-span-7 lg:col-start-6">
-              WProjects is a remote advisory firm providing practical project
-              support, backed by first-hand experience of how complex construction
-              and capital projects are planned, controlled and delivered.
-            </p>
-          </div>
-          {demoVideoEnabled && <div className="mt-8 max-w-[640px] sm:mt-10"><DemoVideo /></div>}
-          <div className={demoVideoEnabled ? "mt-8 sm:mt-10" : "mt-14 sm:mt-20"}>
+        <CinematicHero id="experience-page-heading" eyebrow="EXPERIENCE & EXPERTISE" title="Advice grounded in real project delivery.">
+          <p>WProjects is a remote advisory firm providing practical project support, backed by first-hand experience of how complex construction and capital projects are planned, controlled and delivered.</p>
+        </CinematicHero>
+        <section aria-label="Background at a glance" className="py-8 sm:py-12">
+          <div className="site-container">
             <h2 className="section-label">Background at a glance</h2>
             <ul className="mt-6 grid gap-x-8 border-b border-border sm:grid-cols-2 lg:grid-cols-4">
               {background.map((fact) => (

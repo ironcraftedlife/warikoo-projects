@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function DemoVideo() {
+export default function DemoVideo({ background = false }: { background?: boolean }) {
   const video = useRef<HTMLVideoElement>(null);
   const reconcile = useRef<() => void>(() => {});
   const userPaused = useRef(false);
@@ -46,8 +46,8 @@ export default function DemoVideo() {
   }, []);
 
   return (
-    <div data-demo-video className="min-w-0">
-      <div className="aspect-video w-full overflow-hidden">
+    <div data-demo-video className={background ? "absolute inset-0" : "min-w-0"}>
+      <div className={background ? "absolute inset-0 overflow-hidden" : "aspect-video w-full overflow-hidden"}>
         <video
           ref={video}
           muted
@@ -59,10 +59,10 @@ export default function DemoVideo() {
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onError={() => setUnavailable(true)}
-          className="h-full w-full object-contain"
+          className={background ? "h-full w-full object-cover object-center" : "h-full w-full object-contain"}
         />
       </div>
-      <div className="mt-1 flex justify-end">
+      <div className={background ? "site-container absolute inset-x-0 bottom-3 z-20 flex justify-end" : "mt-1 flex justify-end"}>
         <button
           type="button"
           disabled={unavailable}
@@ -72,7 +72,7 @@ export default function DemoVideo() {
             reconcile.current();
           }}
           aria-label={playing ? "Pause preview video" : "Play preview video"}
-          className="nav-link inline-flex min-h-11 items-center text-xs font-medium text-muted disabled:cursor-default"
+          className={background ? "inline-flex min-h-11 items-center border border-white/40 bg-dark/50 px-3 text-xs font-medium text-white hover:bg-dark/80 disabled:cursor-default" : "nav-link inline-flex min-h-11 items-center text-xs font-medium text-muted disabled:cursor-default"}
         >
           {unavailable ? "Video unavailable" : playing ? "Pause video" : "Play video"}
         </button>
