@@ -9,10 +9,10 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`site-container ${styles.grid}`}>
         <div className={styles.brand}>
-          <Link href="/" aria-label="WProjects home" className="block w-[180px] max-w-full">
+          <Link href="/" aria-label="WProjects home" className={`${styles.logo} block w-[180px] max-w-full`}>
             <Image src="/brand/warikoo-logo-original.svg" alt="WARIKOO Projects — Plan, Control, Deliver" width={1254} height={1254} unoptimized className="h-auto w-full" />
           </Link>
-          <p className="mt-3 max-w-[24rem] text-base leading-[1.75] text-muted">
+          <p className={`${styles.description} mt-5 max-w-[24rem] text-base leading-[1.75]`}>
             WProjects provides project planning, controls, construction advisory,
             HSE and documentation support.
           </p>
@@ -20,7 +20,7 @@ export default function Footer() {
         <div className={styles.navigation}>
           <div className={styles.links}>
           <nav aria-label="Footer navigation">
-            <p className="section-label mb-5 text-white/65">
+            <p className={`${styles.label} section-label mb-5`}>
               NAVIGATION
             </p>
             <ul className="text-base lg:text-sm">
@@ -32,19 +32,19 @@ export default function Footer() {
             </ul>
           </nav>
           <div>
-            <p className="section-label mb-5 text-white/65">
+            <p className={`${styles.label} section-label mb-5`}>
               SECTORS WE SUPPORT
             </p>
             <ul className="space-y-3 text-base lg:text-sm">
               {sectors.map((sector) => <li key={sector}>{sector}</li>)}
             </ul>
-            <Link href="/contact" className="nav-link mt-6 inline-flex min-h-11 items-center gap-5 border-b border-white/30 text-sm font-medium hover:text-white">Discuss Your Project <span aria-hidden="true" className="motion-arrow text-accent">→</span></Link>
+            <Link href="/contact" className="nav-link mt-6 inline-flex min-h-11 items-center gap-5 border-b border-white/20 text-sm font-medium text-accent hover:text-white">Discuss Your Project <span aria-hidden="true" className="motion-arrow">→</span></Link>
           </div>
           </div>
+        </div>
           <p className={`${styles.legal} text-xs text-white/65`}>
             © {new Date().getFullYear()} WARIKOO Projects Ltd.
           </p>
-        </div>
       </div>
     </footer>
   );
