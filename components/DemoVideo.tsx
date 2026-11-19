@@ -21,7 +21,7 @@ export default function DemoVideo({ background = false }: { background?: boolean
       if (shouldPlay) {
         // Defer the MP4 request until playback is appropriate. Reduced-motion
         // visitors see only the poster unless they explicitly choose Play.
-        if (!element.hasAttribute("src")) element.src = "/videos/wprojects-preview.mp4";
+        if (!element.hasAttribute("src")) element.src = "/videos/wprojects-final.mp4";
         void element.play().catch(() => setPlaying(false));
       } else {
         element.pause();
@@ -54,8 +54,8 @@ export default function DemoVideo({ background = false }: { background?: boolean
           loop
           playsInline
           preload="none"
-          poster="/videos/wprojects-preview-poster.jpg"
-          aria-label="Temporary design preview showing transport infrastructure, engineering personnel, architecture and construction. This footage does not depict WProjects projects."
+          poster="/videos/wprojects-final-poster.jpg"
+          aria-label="WProjects brand video featuring project and engineering environments."
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onError={() => setUnavailable(true)}
